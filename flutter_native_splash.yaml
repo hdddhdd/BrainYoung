@@ -1,0 +1,9 @@
+flutter_native_splash:
+  color: "#8ae9ff"
+  background_image: "assets/main_temp.png"
+  # ios_content_mode: scaleToFill
+  # web_image_mode: cover
+  fullscreen: true
+  android: false
+  ios: true
+  web: true
