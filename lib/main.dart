@@ -1,6 +1,10 @@
-import 'package:brainyoung_mvp/pages/ozzic_page.dart';
-import 'package:brainyoung_mvp/pages/signmenu_page.dart';
+import 'package:brainyoung_mvp/pages/date_picker.dart';
+import 'package:brainyoung_mvp/pages/email_page.dart';
+import 'package:brainyoung_mvp/pages/menu_page.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
+
+import 'package:flutter_localizations/flutter_localizations.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,12 +16,25 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const SignMenuPage(),
+    return const CupertinoApp(
+      // ignore: prefer_const_literals_to_create_immutables
+      localizationsDelegates: [
+        //GolbalMateriallLocation은 안드로이드
+        //GlobalCupertinoLocation은 IOS
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      supportedLocales: [
+        const Locale('ko', 'KO'),
+        const Locale('en', 'US'),
+      ],
+       debugShowCheckedModeBanner: false,
+
+
+      title: 'Brainyoung mvp demo',
+      
+      home: CuDatePicker(),
     );
   }
 }
