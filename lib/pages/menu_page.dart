@@ -23,19 +23,19 @@ class MainMenuPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
 
-            Container(
+            const SizedBox(
               //빈 공간 넣어주기
               width: 200,
               height: 500,
             ),
 
             Container(
-              padding: EdgeInsets.only(bottom: 8),
+              padding: const EdgeInsets.only(bottom: 8),
               width: 260,
               height: 50,
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Color(0xffF7E600),
+                  backgroundColor: const Color(0xffF7E600),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(30.0),
                   ),
@@ -57,12 +57,12 @@ class MainMenuPage extends StatelessWidget {
               ),
             ),
             Container(
-              padding: EdgeInsets.only(bottom: 8),
+              padding: const EdgeInsets.only(bottom: 8),
               width: 260,
               height: 50,
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Color(0xff2DB400),
+                  backgroundColor: const Color(0xff2DB400),
 
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(30.0),
@@ -85,7 +85,7 @@ class MainMenuPage extends StatelessWidget {
               ),
             ),
             Container(
-              padding: EdgeInsets.only(bottom: 8),
+              padding: const EdgeInsets.only(bottom: 8),
               width: 260,
               height: 50,
               child: ElevatedButton(
@@ -112,7 +112,7 @@ class MainMenuPage extends StatelessWidget {
               ),
             ),
             Container(
-              padding: EdgeInsets.only(bottom: 12),
+              padding: const EdgeInsets.only(bottom: 12),
               width: 260,
               height: 50,
               child: ElevatedButton(

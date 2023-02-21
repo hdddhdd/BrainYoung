@@ -1,14 +1,23 @@
 //03 - 당신에 대해 알고싶어요 페이지
-import 'package:brainyoung_mvp/pages/date_picker.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:customtogglebuttons/customtogglebuttons.dart';
 
-class AboutyouPage extends StatelessWidget {
-  const AboutyouPage({super.key});
+class DatePickerApp extends StatefulWidget {
+  const DatePickerApp({super.key});
+
+  @override
+  State<DatePickerApp> createState() => _DatePickerAppState();
+}
+
+class _DatePickerAppState extends State<DatePickerApp> {
+  List<bool> isSelected = [false, false, false];
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      // color: Colors.black,
       decoration: const BoxDecoration(
           image: DecorationImage(
             fit: BoxFit.cover,
@@ -65,11 +74,22 @@ class AboutyouPage extends StatelessWidget {
                   // ignore: prefer_const_literals_to_create_immutables
                   children: [
                     Container(
-                      margin: EdgeInsets.fromLTRB(0, 0, 0, 30),
+                      alignment: Alignment(-1.0, 0.5),
+
+                      height: 40,
+                      width: 290,
+
+                      child: const Text("성별",
+                          style: TextStyle(fontSize: 12, color: Colors.white)),
+                      //Container 영역 확인용
+                      // color: Colors.white,
+
+                      // padding: EdgeInsets.fromLTRB(30, 20, 0, 20),
+                    ),
+                    Container(
+                      margin: const EdgeInsets.fromLTRB(0, 0, 0, 30),
                       child: const TextField(
                         decoration: InputDecoration(
-                          // labelText: '이메일',
-                          // labelStyle: TextStyle(color: Colors.white),
                           hintText: '이름',
                           hintStyle: TextStyle(color: Colors.white),
                           //전체가 둥글게
@@ -84,60 +104,88 @@ class AboutyouPage extends StatelessWidget {
                               color: Colors.white,
                             ),
                           ),
-                          //밑줄만
-                          // enabledBorder: OutlineInputBorder(
-                          //   borderSide: BorderSide.none,
-                          // ),
+
                           filled: true,
                           fillColor: Color.fromARGB(24, 215, 215, 215),
                         ),
                         style: TextStyle(fontSize: 15, color: Colors.white),
                       ),
                     ),
-                    Container(
-                        margin: EdgeInsets.fromLTRB(0, 0, 0, 10),
-                        child: CupertinoButton(
-                          child: Text(
-                            'Open data picker',
-                            textAlign: TextAlign.center,
-                          ),
-                          onPressed: () {},
-                        )),
-                    Container(
-                      child: TextButton(
-                        onPressed: () {},
-                        child: const Text(''),
-                      ),
-                    ),
                   ],
                 ),
               ),
+
+              Container(
+                alignment: Alignment(-1.0, 0.5),
+
+                height: 40,
+                width: 290,
+
+                child: const Text("성별",
+                    style: TextStyle(fontSize: 12, color: Colors.white)),
+                //Container 영역 확인용
+                // color: Colors.white,
+
+                // padding: EdgeInsets.fromLTRB(30, 20, 0, 20),
+              ),
+
+              //여기에 추가하기
+              ToggleButtons(
+                isSelected: isSelected,
+                fillColor: Color.fromARGB(24, 215, 215, 215),
+                selectedColor: Colors.white,
+
+                borderRadius: BorderRadius.all(Radius.circular(30.0)),
+                color: Colors.grey,
+                // ignore: prefer_const_literals_to_create_immutables
+                children: <Widget>[
+                  const Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 25),
+                    child: Text('남자', style: TextStyle(fontSize: 18)),
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 25),
+                    child: Text('여자', style: TextStyle(fontSize: 18)),
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 25),
+                    child: Text('선택안함', style: TextStyle(fontSize: 18)),
+                  ),
+                ],
+                onPressed: (int newIndex) {
+                  setState(() {
+                    for (int index = 0; index < isSelected.length; index++)
+                      if (index == newIndex) {
+                        isSelected[index] = true;
+                      } else {
+                        isSelected[index] = false;
+                      }
+                  });
+                },
+              ),
             ]))),
+
+            //다음버튼
             Container(
                 height: 80,
                 width: double.infinity,
-                color: const Color.fromARGB(255, 91, 118, 255),
                 child: ElevatedButton(
-                   //다음 버튼 만들기
-                   onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const CuDatePicker()),
-                  );
-                },
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(
+                        const Color.fromARGB(255, 113, 151, 255)),
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const DatePickerApp()),
+                    );
+                  },
                   child: const Text(
                     '다음',
                     style: TextStyle(color: Colors.white, fontSize: 15),
                   ),
-                )
-
-                // child: const Text(
-                //   '다음',
-                //   style: TextStyle(color: Colors.white, fontSize: 15),
-                //   textAlign: TextAlign.center,
-                // ),
-                ),
+                )),
           ],
         )),
       ),

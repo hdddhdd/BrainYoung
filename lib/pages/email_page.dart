@@ -34,7 +34,7 @@ class OzzicHomePage extends StatelessWidget {
                 child: SingleChildScrollView(
                     child: Column(children: [
               Container(
-                padding: EdgeInsets.fromLTRB(0, 50, 0, 0),
+                padding: const EdgeInsets.fromLTRB(0, 50, 0, 0),
                 height: 200,
                 child: const Text(
                   '이메일로 시작',
@@ -42,8 +42,8 @@ class OzzicHomePage extends StatelessWidget {
                 ),
               ),
               Container(
-                width: 305,
-                height: 200,
+                width: 270,
+                height: 180,
                 // margin: EdgeInsets.only(left: 10),
                 // padding: const EdgeInsets.all(10),
                 alignment: const Alignment(-1.5, -2.0),
@@ -64,11 +64,19 @@ class OzzicHomePage extends StatelessWidget {
                   // ignore: prefer_const_literals_to_create_immutables
                   children: [
                     Container(
-                      margin: EdgeInsets.fromLTRB(0, 0, 0, 30),
+                      alignment: Alignment(-1.0, 0.5),
+                      height: 20,
+                      width: 290,
+                      child: const Text("이메일",
+                          style: TextStyle(fontSize: 12, color: Colors.white)),
+                      //Container 영역 확인용
+                      // color: Colors.white,
+                      // padding: EdgeInsets.fromLTRB(30, 20, 0, 20),
+                    ),
+                    Container(
+                      margin: const EdgeInsets.fromLTRB(0, 0, 0, 30),
                       child: const TextField(
-                        
                         decoration: InputDecoration(
-                          
                           // labelText: '이메일',
                           // labelStyle: TextStyle(color: Colors.white),
                           hintText: '이메일',
@@ -96,7 +104,20 @@ class OzzicHomePage extends StatelessWidget {
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.fromLTRB(0, 0, 0, 10),
+                      alignment: Alignment(-1.0, 0.5),
+
+                      height: 20,
+                      width: 290,
+
+                      child: const Text("비밀번호",
+                          style: TextStyle(fontSize: 12, color: Colors.white)),
+                      //Container 영역 확인용
+                      // color: Colors.white,
+
+                      // padding: EdgeInsets.fromLTRB(30, 20, 0, 20),
+                    ),
+                    Container(
+                      margin: const EdgeInsets.fromLTRB(0, 0, 0, 10),
                       child: const TextField(
                         decoration: InputDecoration(
                           // labelText: '비밀번호',
@@ -120,27 +141,37 @@ class OzzicHomePage extends StatelessWidget {
                       ),
                     ),
                     Container(
-                      child: const TextField(
-                        decoration: InputDecoration(
-                          // labelText: '비밀번호',
-                          // labelStyle: TextStyle(color: Colors.white),
-                          hintText: '비밀번호 확인',
-                          hintStyle: TextStyle(color: Colors.white),
-                          border: OutlineInputBorder(
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(30.0)),
-                          ),
-                          focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
-                              width: 2,
-                              color: Colors.white,
-                            ),
-                          ),
-                          filled: true,
-                          fillColor: Color.fromARGB(24, 215, 215, 215),
+                      alignment: Alignment(-1.0, 0.5),
+
+                      height: 20,
+                      width: 290,
+
+                      child: const Text("비밀번호 확인",
+                          style: TextStyle(fontSize: 12, color: Colors.white)),
+                      //Container 영역 확인용
+                      // color: Colors.white,
+
+                      // padding: EdgeInsets.fromLTRB(30, 20, 0, 20),
+                    ),
+                    const TextField(
+                      decoration: InputDecoration(
+                        // labelText: '비밀번호',
+                        // labelStyle: TextStyle(color: Colors.white),
+                        hintText: '비밀번호 확인',
+                        hintStyle: TextStyle(color: Colors.white),
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(30.0)),
                         ),
-                        style: TextStyle(fontSize: 15, color: Colors.white),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            width: 2,
+                            color: Colors.white,
+                          ),
+                        ),
+                        filled: true,
+                        fillColor: Color.fromARGB(24, 215, 215, 215),
                       ),
+                      style: TextStyle(fontSize: 15, color: Colors.white),
                     ),
                   ],
                 ),
@@ -149,16 +180,19 @@ class OzzicHomePage extends StatelessWidget {
             Container(
                 height: 80,
                 width: double.infinity,
-                color: const Color.fromARGB(255, 91, 118, 255),
                 child: ElevatedButton(
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(
+                        const Color.fromARGB(255, 113, 151, 255)),
+                  ),
                   //다음 버튼 만들기
-                   onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const AboutyouPage()),
-                  );
-                },
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const DatePickerApp()),
+                    );
+                  },
                   child: const Text(
                     '다음',
                     style: TextStyle(color: Colors.white, fontSize: 15),

@@ -1,9 +1,6 @@
-import 'package:brainyoung_mvp/pages/date_picker.dart';
-import 'package:brainyoung_mvp/pages/email_page.dart';
+import 'package:brainyoung_mvp/pages/aboutyou_page.dart';
 import 'package:brainyoung_mvp/pages/menu_page.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
-
 import 'package:flutter_localizations/flutter_localizations.dart';
 
 void main() {
@@ -16,25 +13,20 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const CupertinoApp(
+    return const MaterialApp(
       // ignore: prefer_const_literals_to_create_immutables
       localizationsDelegates: [
-        //GolbalMateriallLocation은 안드로이드
-        //GlobalCupertinoLocation은 IOS
-        GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-      ],
-      supportedLocales: [
-        const Locale('ko', 'KO'),
-        const Locale('en', 'US'),
-      ],
-       debugShowCheckedModeBanner: false,
-
-
-      title: 'Brainyoung mvp demo',
-      
-      home: CuDatePicker(),
+    GlobalMaterialLocalizations.delegate,
+    GlobalWidgetsLocalizations.delegate,
+    GlobalCupertinoLocalizations.delegate,
+  ],
+  supportedLocales: [
+    Locale('en'), // English
+    Locale('es'), // Spanish
+  ],
+      title: 'Flutter Demo',
+   
+      home: MainMenuPage(),
     );
   }
 }
@@ -48,13 +40,13 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
+  // int _counter = 0;
 
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
+  // void _incrementCounter() {
+  //   setState(() {
+  //     _counter++;
+  //   });
+  //}
 
   @override
   Widget build(BuildContext context) {
@@ -67,6 +59,7 @@ class _MyHomePageState extends State<MyHomePage> {
 }
 
 //위젯 1
+// ignore: camel_case_types
 class homewidget extends StatelessWidget {
   const homewidget({
     Key? key,
