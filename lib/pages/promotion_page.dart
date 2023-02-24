@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:customtogglebuttons/customtogglebuttons.dart';
 
+import 'fadeinout_page1.dart';
+
 class PromotionPage extends StatelessWidget {
   const PromotionPage({super.key});
 
@@ -126,7 +128,7 @@ Container(
                                   context,
                                   MaterialPageRoute(
                                       builder: (context) =>
-                                          const FadeInOutPage()),
+                                          const FadeInOutPage1()),
                                 );
                               },
                               child: const Text(
