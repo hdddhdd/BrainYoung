@@ -1,4 +1,6 @@
 import 'package:brainyoung_mvp/pages/aboutyou_page.dart';
+import 'package:brainyoung_mvp/pages/fadeinout_page.dart';
+import 'package:brainyoung_mvp/pages/image_page_test.dart';
 import 'package:brainyoung_mvp/pages/menu_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -54,7 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
         theme: ThemeData(
           primarySwatch: Colors.grey,
         ),
-        home: const homewidget());
+        home: const FadeInOutPage());
   }
 }
 

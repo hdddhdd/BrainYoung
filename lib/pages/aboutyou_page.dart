@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:customtogglebuttons/customtogglebuttons.dart';
 
+import 'aboutyou2_page.dart';
+
 class DatePickerApp extends StatefulWidget {
   const DatePickerApp({super.key});
 
@@ -178,7 +180,7 @@ class _DatePickerAppState extends State<DatePickerApp> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const DatePickerApp()),
+                          builder: (context) => const AboutYou2Page()),
                     );
                   },
                   child: const Text(
