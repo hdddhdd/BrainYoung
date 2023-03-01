@@ -44,6 +44,7 @@ dependencies:
 
   #galary, image
   image_picker: ^0.8.6+2
+  get: ^4.6.5
 
 dev_dependencies:
   flutter_test:

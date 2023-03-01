@@ -1,4 +1,9 @@
+import 'dart:async';
+
+import 'package:brainyoung_mvp/pages/choosemenu1.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 
 void main() => runApp(const FadeInOutPage2());
 
@@ -41,7 +46,16 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget>
     _controller.dispose();
     super.dispose();
   }
+void initState() {
+    //initstate(): 클래스가 호출됐을 때 제일 처음 상태를 결정해주는 함수(1번만 실행된다)
+    // TODO: implement initState
 
+    Timer(Duration(seconds: 3), () {
+      Get.to(() => ChooseMenu1Page());
+      // Get.to(const OzzicHomePage());
+    });
+    super.initState();
+  }
   @override
   Widget build(BuildContext context) {
     return Material(

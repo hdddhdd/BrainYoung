@@ -1,4 +1,11 @@
+import 'dart:async';
+
+import 'package:brainyoung_mvp/pages/fadeinout_page2.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+
+import 'email_page.dart';
 
 void main() => runApp(const FadeInOutPage1());
 
@@ -12,6 +19,7 @@ class FadeInOutPage1 extends StatelessWidget {
     return const MaterialApp(
       title: _title,
       home: MyStatefulWidget(),
+      
     );
   }
 }
@@ -41,10 +49,20 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget>
     _controller.dispose();
     super.dispose();
   }
+ void initState() {
+    //initstate(): 클래스가 호출됐을 때 제일 처음 상태를 결정해주는 함수(1번만 실행된다)
+    // TODO: implement initState
 
+    Timer(Duration(seconds: 3), () {
+      Get.to(() => FadeInOutPage2());
+      // Get.to(const OzzicHomePage());
+    });
+    super.initState();
+  }
   @override
   Widget build(BuildContext context) {
     return Material(
+      
       type: MaterialType.transparency,
       child: Container(
         color: Color.fromARGB(255, 0, 0, 0),
@@ -58,8 +76,9 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget>
                 ),//터치하면 다음 페이지로 이동하게끔!
               ),
             ),
-            
-            )),
+          
+            )
+            ),
             
     );
   }
