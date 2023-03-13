@@ -22,7 +22,7 @@ class _LandingPageState extends State<LandingPage> {
     // TODO: implement initState
 
     Timer(Duration(seconds: 3), () {
-      Get.to(() => OzzicHomePage());
+      Get.to(() => MainMenuPage());
       // Get.to(const OzzicHomePage());
     });
     super.initState();

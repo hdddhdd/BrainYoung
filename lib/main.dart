@@ -59,7 +59,7 @@ class _MyHomePageState extends State<MyHomePage> {
         theme: ThemeData(
           primarySwatch: Colors.grey,
         ),
-        home: const MainMenuPage());
+        home: const LandingPage());
   }
 }
 
