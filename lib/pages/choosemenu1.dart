@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:brainyoung_mvp/pages/choosemenu2.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -61,7 +62,7 @@ class _ChooseMenu1PageState extends State<ChooseMenu1Page> {
                 padding: const EdgeInsets.fromLTRB(0, 50, 0, 0),
                 height: 200,
                 child: const Text(
-                  '이메일로 시작',
+                  '메뉴 선택 페이지 1',
                   style: TextStyle(color: Colors.white, fontSize: 15),
                 ),
               ),
@@ -72,7 +73,7 @@ class _ChooseMenu1PageState extends State<ChooseMenu1Page> {
                 // padding: const EdgeInsets.all(10),
                 alignment: const Alignment(-1.5, -2.0),
                 child: const Text(
-                  '이메일📨을\n입력해주세요',
+                  '메뉴 선택 페이지 만들어야 함.',
                   textAlign: TextAlign.start,
                   style: TextStyle(
                     color: Colors.white,
@@ -87,116 +88,7 @@ class _ChooseMenu1PageState extends State<ChooseMenu1Page> {
                   //이게 뭔의미인진 아직 모름
                   // ignore: prefer_const_literals_to_create_immutables
                   children: [
-                    Container(
-                      alignment: Alignment(-1.0, 0.5),
-                      height: 20,
-                      width: 290,
-                      child: const Text("이메일",
-                          style: TextStyle(fontSize: 12, color: Colors.white)),
-                      //Container 영역 확인용
-                      // color: Colors.white,
-                      // padding: EdgeInsets.fromLTRB(30, 20, 0, 20),
-                    ),
-                    Container(
-                      margin: const EdgeInsets.fromLTRB(0, 0, 0, 30),
-                      child: const TextField(
-                        decoration: InputDecoration(
-                          // labelText: '이메일',
-                          // labelStyle: TextStyle(color: Colors.white),
-                          hintText: '이메일',
-                          hintStyle: TextStyle(color: Colors.white),
-                          //전체가 둥글게
-                          border: OutlineInputBorder(
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(30.0)),
-                          ),
-
-                          focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
-                              width: 2,
-                              color: Colors.white,
-                            ),
-                          ),
-                          //밑줄만
-                          // enabledBorder: OutlineInputBorder(
-                          //   borderSide: BorderSide.none,
-                          // ),
-                          filled: true,
-                          fillColor: Color.fromARGB(24, 215, 215, 215),
-                        ),
-                        style: TextStyle(fontSize: 15, color: Colors.white),
-                      ),
-                    ),
-                    Container(
-                      alignment: Alignment(-1.0, 0.5),
-
-                      height: 20,
-                      width: 290,
-
-                      child: const Text("비밀번호",
-                          style: TextStyle(fontSize: 12, color: Colors.white)),
-                      //Container 영역 확인용
-                      // color: Colors.white,
-
-                      // padding: EdgeInsets.fromLTRB(30, 20, 0, 20),
-                    ),
-                    Container(
-                      margin: const EdgeInsets.fromLTRB(0, 0, 0, 10),
-                      child: const TextField(
-                        decoration: InputDecoration(
-                          // labelText: '비밀번호',
-                          // labelStyle: TextStyle(color: Colors.white),
-                          hintText: '비밀번호',
-                          hintStyle: TextStyle(color: Colors.white),
-                          border: OutlineInputBorder(
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(30.0)),
-                          ),
-                          focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
-                              width: 2,
-                              color: Colors.white,
-                            ),
-                          ),
-                          filled: true,
-                          fillColor: Color.fromARGB(24, 215, 215, 215),
-                        ),
-                        style: TextStyle(fontSize: 15, color: Colors.white),
-                      ),
-                    ),
-                    Container(
-                      alignment: Alignment(-1.0, 0.5),
-
-                      height: 20,
-                      width: 290,
-
-                      child: const Text("비밀번호 확인",
-                          style: TextStyle(fontSize: 12, color: Colors.white)),
-                      //Container 영역 확인용
-                      // color: Colors.white,
-
-                      // padding: EdgeInsets.fromLTRB(30, 20, 0, 20),
-                    ),
-                    const TextField(
-                      decoration: InputDecoration(
-                        // labelText: '비밀번호',
-                        // labelStyle: TextStyle(color: Colors.white),
-                        hintText: '비밀번호 확인',
-                        hintStyle: TextStyle(color: Colors.white),
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(30.0)),
-                        ),
-                        focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(
-                            width: 2,
-                            color: Colors.white,
-                          ),
-                        ),
-                        filled: true,
-                        fillColor: Color.fromARGB(24, 215, 215, 215),
-                      ),
-                      style: TextStyle(fontSize: 15, color: Colors.white),
-                    ),
+                   
                   ],
                 ),
               ),
@@ -214,7 +106,7 @@ class _ChooseMenu1PageState extends State<ChooseMenu1Page> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const DatePickerApp()),
+                          builder: (context) => const ChooseMenu2Page()),
                     );
                   },
                   child: const Text(

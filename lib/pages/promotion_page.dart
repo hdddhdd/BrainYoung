@@ -1,6 +1,5 @@
 //03 - 당신에 대해 알고싶어요 페이지
 
-import 'package:brainyoung_mvp/pages/fadeinout_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:customtogglebuttons/customtogglebuttons.dart';

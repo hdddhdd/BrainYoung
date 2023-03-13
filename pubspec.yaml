@@ -45,6 +45,7 @@ dependencies:
   #galary, image
   image_picker: ^0.8.6+2
   get: ^4.6.5
+  video_player: ^2.6.0
 
 dev_dependencies:
   flutter_test:
