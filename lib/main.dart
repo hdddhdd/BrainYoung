@@ -1,10 +1,13 @@
+import 'package:brainyoung_mvp/pages/Content_page.dart';
 import 'package:brainyoung_mvp/pages/aboutyou_page.dart';
+import 'package:brainyoung_mvp/pages/content_0318_page.dart';
 import 'package:brainyoung_mvp/pages/image_page_test.dart';
 import 'package:brainyoung_mvp/pages/menu_page.dart';
 import 'package:brainyoung_mvp/pages/splash.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:get/route_manager.dart';
+import 'package:video_player/video_player.dart';
 
 void main() {
   runApp(const MyApp());
@@ -30,7 +33,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
    
       // home: MainMenuPage(),
-      home: LandingPage(),
+      home: MainContentPage(),
     );
   }
 }
