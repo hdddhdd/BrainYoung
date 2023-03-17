@@ -1,8 +1,11 @@
 import 'dart:async';
 
+import 'package:brainyoung_mvp/pages/ingeupdong_page.dart';
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 import 'package:youtube_player_iframe/youtube_player_iframe.dart';
+
+import 'my_page.dart';
 
 void main() => runApp(const VideoPlayerApp());
 
@@ -29,6 +32,23 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
   late VideoPlayerController _controller;
   late Future<void> _initializeVideoPlayerFuture;
   
+  int _selectedIndex = 0;
+  static const TextStyle optionStyle = TextStyle(
+      fontSize: 30,
+      fontWeight: FontWeight.bold
+  );
+  
+  final List<Widget> _widgetOptions = <Widget>[
+    const IngeupdongPage(),
+    const VideoPlayerApp(),
+    const MyPage(),
+  ];
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
   @override
   void initState() {
     super.initState();
@@ -116,12 +136,26 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
           
         ),
       ),
-
-      
-      
-
-
-      
+     bottomNavigationBar: BottomNavigationBar(
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.text_snippet),
+            label: '인급동',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: '홈',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.people),
+            label: '마이페이지',
+          ),
+        ],
+        currentIndex: _selectedIndex,
+        selectedItemColor: Colors.black,
+        onTap: _onItemTapped,
+      ),
     );
   }
+  
 }

@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
    
       // home: MainMenuPage(),
-      home: MainContentPage(),
+      home: VideoPlayerApp(),
     );
   }
 }
