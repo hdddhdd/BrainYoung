@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:brainyoung_mvp/pages/Content_page.dart';
 import 'package:brainyoung_mvp/pages/choosemenu1.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -51,7 +52,8 @@ void initState() {
     // TODO: implement initState
 
     Timer(Duration(seconds: 3), () {
-      Get.to(() => ChooseMenu1Page());
+      Get.to(() =>VideoPlayerApp());
+      //choosemenu1
       // Get.to(const OzzicHomePage());
     });
     super.initState();

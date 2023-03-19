@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import 'package:brainyoung_mvp/pages/ingeupdong_page.dart';
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
