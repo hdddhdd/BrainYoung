@@ -27,6 +27,7 @@ class _SearchPageState extends State<SearchPage> {
         
       ),
       home: Scaffold(
+        backgroundColor: Colors.black,
         appBar: AppBar(
           backgroundColor: Colors.black,
           elevation: 0,
@@ -51,9 +52,37 @@ class _SearchPageState extends State<SearchPage> {
             ),
           ),
         ),
-        body: Container(
-          color: Colors.black,
-        )
+        body:ListView(
+          children: [
+            Container(
+              margin:EdgeInsets.symmetric(vertical: 30, horizontal: 30),
+              child: Text(
+                "최근 검색어",
+                style: TextStyle(color: Color.fromARGB(255, 207, 207, 207)),
+              ),
+            ),
+            Container(
+              margin:EdgeInsets.symmetric(horizontal: 30),
+               height: 50,
+               child: Container(
+                 child:Text(
+                  '햄스터가 보고싶어',
+                  style: TextStyle(color: Colors.white),
+                  ),
+               )
+             ),
+             Container(
+              margin:EdgeInsets.symmetric(horizontal: 30),
+               height: 50,
+               child: Container(
+                 child:Text(
+                  '나는 고양이를 보고싶어',
+                  style: TextStyle(color: Colors.white),
+                  ),
+               )
+             ),
+          ],
+        ),
       )
     );
   }
