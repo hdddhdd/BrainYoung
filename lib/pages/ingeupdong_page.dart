@@ -51,18 +51,13 @@ class IngeupdongPage extends StatelessWidget {
                           builder: (context) => const DatePickerApp()),
                     );
                   },
+
                   child: const Text(
                     '다음',
                     style: TextStyle(color: Colors.white, fontSize: 15),
                   ),
                 )
-
-                // child: const Text(
-                //   '다음',
-                //   style: TextStyle(color: Colors.white, fontSize: 15),
-                //   textAlign: TextAlign.center,
-                // ),
-                ),
+            ),
           ],
         )),
       ),

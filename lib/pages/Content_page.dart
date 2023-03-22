@@ -5,6 +5,7 @@ import 'package:video_player/video_player.dart';
 import 'package:youtube_player_iframe/youtube_player_iframe.dart';
 
 import 'my_page.dart';
+import 'search.dart';
 
 void main() => runApp(const VideoPlayerApp());
 
@@ -135,6 +136,8 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
           
         ),
       ),
+    
+
      bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(

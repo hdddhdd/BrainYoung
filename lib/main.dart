@@ -2,7 +2,10 @@ import 'package:brainyoung_mvp/pages/Content_page.dart';
 import 'package:brainyoung_mvp/pages/aboutyou_page.dart';
 import 'package:brainyoung_mvp/pages/image_page_test.dart';
 import 'package:brainyoung_mvp/pages/menu_page.dart';
+import 'package:brainyoung_mvp/pages/search.dart';
+import 'package:brainyoung_mvp/pages/search_result.dart';
 import 'package:brainyoung_mvp/pages/splash.dart';
+import 'package:brainyoung_mvp/pages/ingeupdong_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:get/route_manager.dart';
@@ -32,7 +35,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
    
       // home: MainMenuPage(),
-      home: MainMenuPage(),
+      home: SearchResultPage(),
     );
   }
 }
