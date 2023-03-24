@@ -80,6 +80,7 @@ flutter:
     - assets/01.png
     - assets/02.png
     - assets/videos/lit_enfj.mp4
+    - assets/wallpaper.jpg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 
