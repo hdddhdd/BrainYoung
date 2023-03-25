@@ -9,26 +9,30 @@ class VideoWidget extends StatelessWidget {
       height: 250,
       color: Colors.black,
       child: Container(
-        
-        margin: EdgeInsets.all(20),
+        decoration: new BoxDecoration(
         color: Colors.grey.withOpacity(0.5),
+        borderRadius: BorderRadius.circular(20),
+        image: new DecorationImage(
+         fit: BoxFit.cover,
+         image: AssetImage('assets/wallpaper.jpg'), // 배경 이미지
+        ),
+      ),
+        margin: EdgeInsets.symmetric(vertical: 10, horizontal: 15),
       )
     );
   }
 
   Widget _simpleDetailInfo() {
     return Container(
-      padding: const EdgeInsets.only(left: 10,bottom: 10),
+      padding: const EdgeInsets.only(left: 10,bottom: 0),
       child: 
       Row(children: [
         Container(
-          padding: const EdgeInsets.only(top: 10),
+          padding: const EdgeInsets.only(top: 0),
           child: CircleAvatar(
             radius: 25,
             backgroundColor: Colors.grey.withOpacity(0.5),
-            backgroundImage: Image.network(
-            "https://unsplash.com/ko/%EC%82%AC%EC%A7%84/adK3Vu70DEQ"
-            ).image,
+            backgroundImage: AssetImage('assets/wallpaper.jpg'),
           ),
         ),
         SizedBox(width:15),
@@ -36,7 +40,7 @@ class VideoWidget extends StatelessWidget {
           child: Column(
             children: [
               Container(
-                padding: const EdgeInsets.only(top:10, bottom:0) ,
+                padding: const EdgeInsets.only(top:0, bottom:0) ,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
