@@ -1,10 +1,12 @@
 //03 - 당신에 대해 알고싶어요 페이지
 
+import 'package:brainyoung_mvp/pages/6FadeInOut2_Page.dart.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:customtogglebuttons/customtogglebuttons.dart';
 
-import 'fadeinout_page1.dart';
+import '5FadeInOut1_Page.dart';
+
 
 class PromotionPage extends StatelessWidget {
   const PromotionPage({super.key});

@@ -2,7 +2,7 @@
 import 'dart:io';
 import 'package:image_picker/image_picker.dart';
 
-import 'package:brainyoung_mvp/pages/promotion_page.dart';
+import 'package:brainyoung_mvp/pages/4promotion_page.dart';
 import 'package:flutter/material.dart';
 
 class AboutYou2Page extends StatefulWidget {

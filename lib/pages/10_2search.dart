@@ -1,6 +1,8 @@
-import 'package:brainyoung_mvp/pages/aboutyou_page.dart';
+import 'package:brainyoung_mvp/pages/10Content_page.dart';
+import 'package:brainyoung_mvp/pages/2aboutyou_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:video_player/video_player.dart';
 import 'package:youtube_player_iframe/youtube_player_iframe.dart';
 
 import 'package:easy_search_bar/easy_search_bar.dart';
@@ -34,8 +36,15 @@ class _SearchPageState extends State<SearchPage> {
       home: Scaffold(
         backgroundColor: Colors.black,
         appBar: AppBar(
+           leading:  IconButton(
+            onPressed: () {
+              Navigator.pop(context); //뒤로가기
+            },
+            color: Colors.white,
+            icon: Icon(Icons.arrow_back)),
           systemOverlayStyle: SystemUiOverlayStyle(
            statusBarBrightness: Brightness.light,
+           
           ),
           backgroundColor: Colors.black,
           elevation: 0,
@@ -47,7 +56,8 @@ class _SearchPageState extends State<SearchPage> {
               child: TextField(
                 style: TextStyle(color: Color.fromARGB(255, 207, 207, 207)),
                 decoration: InputDecoration(
-                  icon: Icon(Icons.arrow_back_ios, color: Color.fromARGB(255, 207, 207, 207)),
+                  //icon: Icon(Icons.arrow_back_ios, color: Color.fromARGB(255, 207, 207, 207)), 
+                  
                   prefixIcon: Icon(Icons.search,color: Colors.white,),
                   filled: true,
                           fillColor: Color.fromARGB(255, 63, 63, 63),

@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:brainyoung_mvp/pages/choosemenu2.dart';
+import 'package:brainyoung_mvp/pages/8choosemenu2.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -8,8 +8,8 @@ import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 
-import 'aboutyou_page.dart';
-import 'email_page.dart';
+import '2aboutyou_page.dart';
+import '1email_page.dart';
 
 class ChooseMenu1Page extends StatefulWidget {
   const ChooseMenu1Page({super.key});

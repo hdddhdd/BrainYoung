@@ -1,15 +1,16 @@
 import 'dart:async';
 
-import 'package:brainyoung_mvp/pages/Content_page.dart';
-import 'package:brainyoung_mvp/pages/choosemenu1.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 
-void main() => runApp(const FadeInOutPage2());
+import '6FadeInOut2_Page.dart.dart';
+import '1email_page.dart';
 
-class FadeInOutPage2 extends StatelessWidget {
-  const FadeInOutPage2({super.key});
+void main() => runApp(const FadeInOutPage1());
+
+class FadeInOutPage1 extends StatelessWidget {
+  const FadeInOutPage1({super.key});
 
   static const String _title = 'Flutter Code Sample';
 
@@ -18,6 +19,7 @@ class FadeInOutPage2 extends StatelessWidget {
     return const MaterialApp(
       title: _title,
       home: MyStatefulWidget(),
+      
     );
   }
 }
@@ -47,13 +49,12 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget>
     _controller.dispose();
     super.dispose();
   }
-void initState() {
+ void initState() {
     //initstate(): 클래스가 호출됐을 때 제일 처음 상태를 결정해주는 함수(1번만 실행된다)
     // TODO: implement initState
 
     Timer(Duration(seconds: 3), () {
-      Get.to(() =>VideoPlayerApp());
-      //choosemenu1
+      Get.to(() => FadeInOutPage2());
       // Get.to(const OzzicHomePage());
     });
     super.initState();
@@ -61,6 +62,7 @@ void initState() {
   @override
   Widget build(BuildContext context) {
     return Material(
+      
       type: MaterialType.transparency,
       child: Container(
         color: Color.fromARGB(255, 0, 0, 0),
@@ -69,11 +71,30 @@ void initState() {
             child: Container(
               child: const Center(
                 child: Text(
-                  '당신만을 위한\n 고민해결사\n OZZIC입니다.',
+                  '안녕하세요\n김오직님',
                   style: TextStyle(color: Colors.white,fontSize: 40),
-                ),
+                ),//터치하면 다음 페이지로 이동하게끔!
               ),
-            )))
+            ),
+          
+            )
+            ),
+            
     );
   }
 }
+
+//  ElevatedButton(
+//                 child: const Text(''),
+//                 style: ButtonStyle(
+//                     backgroundColor: MaterialStateProperty.all(
+//                         Color.fromARGB(0, 113, 151, 255)),
+//                   ),
+//                 onPressed: () {
+//                     Navigator.push(
+//                       context,
+//                       MaterialPageRoute(
+//                           builder: (context) => const FadeInOutPage2()),
+//                     );
+//                   },
+//               ),

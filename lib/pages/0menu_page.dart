@@ -1,7 +1,7 @@
 //01 - 로그인 방법 선택 페이지
 import 'package:flutter/material.dart';
 
-import 'email_page.dart';
+import '1email_page.dart';
 
 class MainMenuPage extends StatelessWidget {
   const MainMenuPage({super.key});

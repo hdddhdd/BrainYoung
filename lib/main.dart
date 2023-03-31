@@ -1,12 +1,12 @@
-import 'package:brainyoung_mvp/pages/Content_page.dart';
-import 'package:brainyoung_mvp/pages/aboutyou_page.dart';
+import 'package:brainyoung_mvp/pages/10Content_page.dart';
+import 'package:brainyoung_mvp/pages/2aboutyou_page.dart';
 import 'package:brainyoung_mvp/pages/image_page_test.dart';
-import 'package:brainyoung_mvp/pages/menu_page.dart';
-import 'package:brainyoung_mvp/pages/search.dart';
+import 'package:brainyoung_mvp/pages/0menu_page.dart';
+import 'package:brainyoung_mvp/pages/10_2search.dart';
 import 'package:brainyoung_mvp/pages/search_result.dart';
 import 'package:brainyoung_mvp/pages/Video_Detail.dart';
 import 'package:brainyoung_mvp/pages/splash.dart';
-import 'package:brainyoung_mvp/pages/ingeupdong_page.dart';
+import 'package:brainyoung_mvp/pages/10_1ingeupdong_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:get/route_manager.dart';
@@ -25,18 +25,19 @@ class MyApp extends StatelessWidget {
     return const GetMaterialApp(
       // ignore: prefer_const_literals_to_create_immutables
       localizationsDelegates: [
-    GlobalMaterialLocalizations.delegate,
-    GlobalWidgetsLocalizations.delegate,
-    GlobalCupertinoLocalizations.delegate,
-  ],
-  supportedLocales: [
-    Locale('en'), // English
-    Locale('es'), // Spanish
-  ],
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      supportedLocales: [
+        Locale('en'), // English
+        Locale('es'), // Spanish
+      ],
       title: 'Flutter Demo',
-   
-      // home: MainMenuPage(),
-      home: VideoDetail(),
+      // 여기서 처음 화면 설정
+      //home: MainMenuPage(),
+      //희정 컨텐츠 페이지 테스트용
+      home: VideoPlayerApp(),
     );
   }
 }

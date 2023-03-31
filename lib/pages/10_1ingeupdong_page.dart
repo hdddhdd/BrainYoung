@@ -1,4 +1,4 @@
-import 'package:brainyoung_mvp/pages/aboutyou_page.dart';
+import 'package:brainyoung_mvp/pages/2aboutyou_page.dart';
 import 'package:flutter/material.dart';
 import 'package:youtube_player_iframe/youtube_player_iframe.dart';
 

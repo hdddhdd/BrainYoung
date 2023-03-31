@@ -1,7 +1,7 @@
 import 'dart:async';
 
-import 'package:brainyoung_mvp/pages/email_page.dart';
-import 'package:brainyoung_mvp/pages/menu_page.dart';
+import 'package:brainyoung_mvp/pages/1email_page.dart';
+import 'package:brainyoung_mvp/pages/0menu_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';

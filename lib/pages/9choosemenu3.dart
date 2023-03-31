@@ -1,6 +1,5 @@
 import 'dart:async';
 
-import 'package:brainyoung_mvp/pages/choosemenu3.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -8,17 +7,18 @@ import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 
-import 'aboutyou_page.dart';
-import 'email_page.dart';
+import '10Content_page.dart';
+import '2aboutyou_page.dart';
+import '1email_page.dart';
 
-class ChooseMenu2Page extends StatefulWidget {
-  const ChooseMenu2Page({super.key});
+class ChooseMenu3Page extends StatefulWidget {
+  const ChooseMenu3Page({super.key});
 
   @override
-  State<ChooseMenu2Page> createState() => _ChooseMenu2PageState();
+  State<ChooseMenu3Page> createState() => _ChooseMenu3PageState();
 }
 
-class _ChooseMenu2PageState extends State<ChooseMenu2Page> {
+class _ChooseMenu3PageState extends State<ChooseMenu3Page> {
   //  void initState() {
   //   //initstate(): 클래스가 호출됐을 때 제일 처음 상태를 결정해주는 함수(1번만 실행된다)
   //   // TODO: implement initState
@@ -62,7 +62,7 @@ class _ChooseMenu2PageState extends State<ChooseMenu2Page> {
                 padding: const EdgeInsets.fromLTRB(0, 50, 0, 0),
                 height: 200,
                 child: const Text(
-                  '메뉴 선택 페이지 2',
+                  '메뉴 선택 페이지 3',
                   style: TextStyle(color: Colors.white, fontSize: 15),
                 ),
               ),
@@ -215,7 +215,7 @@ class _ChooseMenu2PageState extends State<ChooseMenu2Page> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const ChooseMenu3Page()),
+                          builder: (context) => const VideoPlayerApp()),
                     );
                   },
                   child: const Text(

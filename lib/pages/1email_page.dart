@@ -1,5 +1,5 @@
 //02 - 이메일을 입력해주세요 페이지
-import 'package:brainyoung_mvp/pages/aboutyou_page.dart';
+import 'package:brainyoung_mvp/pages/2aboutyou_page.dart';
 import 'package:flutter/material.dart';
 
 class OzzicHomePage extends StatelessWidget {
