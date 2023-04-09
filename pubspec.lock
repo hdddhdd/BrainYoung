@@ -147,6 +147,14 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_multi_select_items:
+    dependency: "direct main"
+    description:
+      name: flutter_multi_select_items
+      sha256: d30af6dbf64c38c296110a9512eef91b196a185cca056cd1eb32614e5fa91d1c
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.4.2"
   flutter_native_splash:
     dependency: "direct main"
     description:

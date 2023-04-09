@@ -1,4 +1,6 @@
 import 'dart:async';
+import 'package:flutter/material.dart';
+import 'package:flutter_multi_select_items/flutter_multi_select_items.dart';
 
 import 'package:brainyoung_mvp/pages/8choosemenu2.dart';
 import 'package:flutter/cupertino.dart';
@@ -29,10 +31,37 @@ class _ChooseMenu1PageState extends State<ChooseMenu1Page> {
   //   });
   //   super.initState();
   // }
-  
+  Widget getChild(String imagePath, String title) {
+    return Container(
+      decoration: BoxDecoration(
+        //borderRadius: BorderRadius.circular(20),
+        //border: Border.all(color: Color.fromARGB(46, 0, 0, 0), width: 2),
+      ),
+      width: 150,
+      height: 100,
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Expanded(
+              child: Image.network(
+            imagePath,
+            fit: BoxFit.contain,
+          )),
+          Padding(
+            padding: const EdgeInsets.all(30.0),
+            child: Text(
+              title,
+              style: TextStyle(color: Colors.white),
+            ),
+          )
+        ],
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
-   return Container(
+    return Container(
       decoration: const BoxDecoration(
           image: DecorationImage(
             fit: BoxFit.cover,
@@ -61,38 +90,105 @@ class _ChooseMenu1PageState extends State<ChooseMenu1Page> {
               Container(
                 padding: const EdgeInsets.fromLTRB(0, 50, 0, 0),
                 height: 200,
+                alignment: const Alignment(-0.5, -1.0),
+                child: const Text('1 / 3',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                    )),
+              ),
+              Container(
+                width: 500,
+                height: 150,
+                // margin: EdgeInsets.only(left: 10),
+                // padding: const EdgeInsets.all(10),
+                alignment: const Alignment(0, -3.0),
                 child: const Text(
-                  '메뉴 선택 페이지 1',
-                  style: TextStyle(color: Colors.white, fontSize: 15),
+                  '최근 고민이 있었던 주제를\n모두 골라주세요',
+                  textAlign: TextAlign.start,
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 25,
+                  ),
                 ),
               ),
               Container(
                 width: 270,
-                height: 180,
+                height: 100,
                 // margin: EdgeInsets.only(left: 10),
                 // padding: const EdgeInsets.all(10),
-                alignment: const Alignment(-1.5, -2.0),
+                alignment: const Alignment(-1.0, -4.5),
                 child: const Text(
-                  '메뉴 선택 페이지 만들어야 함.',
+                  '고민에 맞는 영상을 추천해드릴게요!',
                   textAlign: TextAlign.start,
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: 40,
+                    fontSize: 15,
                   ),
                 ),
               ),
-              SizedBox(
-                width: 300,
-                // margin: const EdgeInsets.all(10),
-                child: Column(
-                  //이게 뭔의미인진 아직 모름
-                  // ignore: prefer_const_literals_to_create_immutables
-                  children: [
-                   
-                  ],
-                ),
-              ),
             ]))),
+//선택지 여기에 추가하기
+            MultiSelectContainer(
+                //textStyles: const TextStyle(color: Colors.black),
+              
+               itemsPadding: const EdgeInsets.all(5),
+               
+                itemsDecoration: MultiSelectDecorations(
+                  decoration:
+
+                      BoxDecoration(color: Color.fromRGBO(47, 48, 53, 1)),
+                  
+                  
+                  selectedDecoration: const BoxDecoration(
+                    gradient: LinearGradient(colors: [
+                      Color.fromARGB(255, 113, 151, 254),
+                      Color.fromARGB(95, 113, 151, 254)
+                    ]),
+                  color: Colors.black,
+                  
+                  ),
+                ),
+                items: [
+                  MultiSelectCard(
+                    value: 'Dart',
+                    child: getChild(
+                      'https://upload.wikimedia.org/wikipedia/commons/7/7e/Dart-logo.png',
+                      '진로 선택',
+                    ),
+                  ),
+                  MultiSelectCard(
+                    value: 'Python',
+                    child: getChild(
+                        'http://assets.stickpng.com/images/5848152fcef1014c0b5e4967.png',
+                        '성적 관리'),
+                  ),
+                  MultiSelectCard(
+                      value: 'JavaScript',
+                      child: getChild(
+                          'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/480px-Unofficial_JavaScript_logo_2.svg.png',
+                          '친구 관계')),
+                  MultiSelectCard(
+                    value: 'Java',
+                    child: getChild(
+                        'http://assets.stickpng.com/images/58480979cef1014c0b5e4901.png',
+                        '학과 선택'),
+                  ),
+                  MultiSelectCard(
+                    value: 'C#',
+                    child: getChild(
+                        'https://seeklogo.com/images/C/c-sharp-c-logo-02F17714BA-seeklogo.com.png',
+                        '입시 준비'),
+                  ),
+                  MultiSelectCard(
+                    value: 'C++',
+                    child: getChild(
+                        'https://cdn.freebiesupply.com/logos/thumbs/2x/c-logo.png',
+                        '부모님과의 관계'),
+                  ),
+                ],
+                onChange: (allSelectedItems, selectedItem) {}),
+
             Container(
                 height: 80,
                 width: double.infinity,

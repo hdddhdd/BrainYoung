@@ -1,12 +1,10 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
 import 'package:brainyoung_mvp/pages/2aboutyou_page.dart';
 import 'package:brainyoung_mvp/pages/video_widget.dart';
 import 'package:flutter/services.dart';
 import 'package:youtube_player_iframe/youtube_player_iframe.dart';
-
 import 'package:easy_search_bar/easy_search_bar.dart';
 
 class VideoDetail extends StatelessWidget {

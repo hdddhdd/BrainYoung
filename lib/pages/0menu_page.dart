@@ -1,4 +1,5 @@
 //01 - 로그인 방법 선택 페이지
+import 'package:brainyoung_mvp/pages/tbd_page.dart';
 import 'package:flutter/material.dart';
 
 import '1email_page.dart';
@@ -16,7 +17,6 @@ class MainMenuPage extends StatelessWidget {
         ),
       ),
       child: Scaffold(
-        //이거 해줘야 배경보임요.....하하ㅏ
         backgroundColor: Colors.transparent,
         body: Center(
             child: Column(
@@ -51,7 +51,7 @@ class MainMenuPage extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => const OzzicHomePage()),
+                        builder: (context) => const TbdPage()),
                   );
                 },
               ),
@@ -79,7 +79,7 @@ class MainMenuPage extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => const OzzicHomePage()),
+                        builder: (context) => const TbdPage()),
                   );
                 },
               ),
@@ -106,7 +106,7 @@ class MainMenuPage extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => const OzzicHomePage()),
+                        builder: (context) => const TbdPage()),
                   );
                 },
               ),

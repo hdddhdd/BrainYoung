@@ -7,7 +7,6 @@ import 'package:customtogglebuttons/customtogglebuttons.dart';
 
 import '5FadeInOut1_Page.dart';
 
-
 class PromotionPage extends StatelessWidget {
   const PromotionPage({super.key});
 
@@ -104,15 +103,12 @@ class PromotionPage extends StatelessWidget {
                 ],
               ),
             ),
-            Container(
-              width: double.infinity,
-              height: 205,
-            ),
+          
+            SizedBox(height: 151.5,),
             //다음버튼
             Container(
                 height: 80,
                 width: double.infinity,
-                margin: EdgeInsets.fromLTRB(0, 0, 0, 30),
                 child: ElevatedButton(
                   style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(

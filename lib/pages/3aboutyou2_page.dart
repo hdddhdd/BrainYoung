@@ -56,10 +56,10 @@ class _AboutYou2PageState extends State<AboutYou2Page> {
                         Container(
                           transformAlignment: Alignment.center,
                           width: 305,
-                          height: 200,
+                          height: 120,
                           // margin: EdgeInsets.only(left: 10),
                           // padding: const EdgeInsets.all(10),
-                          alignment: const Alignment(-1.5, -2.0),
+                          alignment: const Alignment(-1.5, 2.0),
                           child: const Text(
                             '프로필을 😄\n등록해주세요',
                             textAlign: TextAlign.start,
@@ -69,9 +69,11 @@ class _AboutYou2PageState extends State<AboutYou2Page> {
                             ),
                           ),
                         ),
+                        //공백을 위한 sized box
+                        SizedBox(height: 60.0,), //Column이기 때문에 width는 Column에 맞춰서 자동으로 적용됨
                         SizedBox(
                           width: 300,
-                          height: 360,
+                          height: 270, 
                           // margin: const EdgeInsets.all(10),
                           child: Column(
                             //이게 뭔의미인진 아직 모름
@@ -96,10 +98,10 @@ class _AboutYou2PageState extends State<AboutYou2Page> {
                                       // print('image $image');                                  
                                        },
                                        child: Container(
-                                      alignment: Alignment(-1.0, 0),
+                                      alignment: Alignment(0, 3.0),
                                       child: Icon(
                                         Icons.camera_alt,
-                                        size: 35.0,
+                                        size: 30.0,
                                         color: Colors.white,
                                       ),
                                     ),
@@ -107,33 +109,16 @@ class _AboutYou2PageState extends State<AboutYou2Page> {
                                     // ignore: prefer_const_constructors
                                   
                                   ),
-                                
-
                                                 
                                 _image == null
-                                      ? const Text('Empty image')
+                                      ? const Text('프로필 이미지가 선택되지 않았습니다.', style: TextStyle(color: Colors.white, fontSize: 10),)
                                       : Image.file(_image!),
                                 
-                                  
-                                  // CircleAvatar(
-                                  //   backgroundColor: Colors.grey,
-                                  //   radius: 100,
-                                  //   child: CircleAvatar(
-                                  //     radius: 100,
-                                  //     backgroundImage: 
-                                      
-                                  //     Image.file(
-                                  //       _image! ,
-                                  //       fit: BoxFit.cover,
-                                  //     ).image,
-                                  //   ),
-                                  // ),
-
                                  
                                 ],
                                 
                               ),
-
+ SizedBox(height: 30.0,), 
                               Container(
                                 alignment: Alignment(-1.0, 0.5),
                                 height: 40,
@@ -173,6 +158,7 @@ class _AboutYou2PageState extends State<AboutYou2Page> {
                             ],
                           ),
                         ),
+ SizedBox(height: 30.0,), 
 
                         //다음버튼
                         Container(

@@ -1,8 +1,13 @@
 import 'package:brainyoung_mvp/pages/10Content_page.dart';
 import 'package:brainyoung_mvp/pages/2aboutyou_page.dart';
-import 'package:brainyoung_mvp/pages/image_page_test.dart';
 import 'package:brainyoung_mvp/pages/0menu_page.dart';
 import 'package:brainyoung_mvp/pages/10_2search.dart';
+import 'package:brainyoung_mvp/pages/3aboutyou2_page.dart';
+import 'package:brainyoung_mvp/pages/4promotion_page.dart';
+import 'package:brainyoung_mvp/pages/7choosemenu1.dart';
+import 'package:brainyoung_mvp/pages/any_widget_example.dart';
+import 'package:brainyoung_mvp/pages/multiselectiontest_page.dart';
+import 'package:brainyoung_mvp/pages/my_page.dart';
 import 'package:brainyoung_mvp/pages/search_result.dart';
 import 'package:brainyoung_mvp/pages/Video_Detail.dart';
 import 'package:brainyoung_mvp/pages/splash.dart';
@@ -37,10 +42,11 @@ class MyApp extends StatelessWidget {
       // 여기서 처음 화면 설정
       //home: MainMenuPage(),
       //희정 컨텐츠 페이지 테스트용
-      home: VideoPlayerApp(),
+      home: ChooseMenu1Page(),
     );
   }
 }
+
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});

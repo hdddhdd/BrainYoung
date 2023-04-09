@@ -55,7 +55,7 @@ class _DatePickerAppState extends State<DatePickerApp> {
               ),
               Container(
                 width: 305,
-                height: 200,
+                height: 120,
                 // margin: EdgeInsets.only(left: 10),
                 // padding: const EdgeInsets.all(10),
                 alignment: const Alignment(-1.5, -2.0),
