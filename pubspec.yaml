@@ -81,6 +81,7 @@ flutter:
     - assets/01.png
     - assets/02.png
     - assets/videos/lit_enfj.mp4
+    - assets/videos/esfj.mp4
     - assets/wallpaper.jpg
     - assets/ozzic_logo.png
     - assets/select_01.png
@@ -92,6 +93,8 @@ flutter:
     - assets/Thn01.jpeg
     - assets/Thn02.jpeg
     - assets/Thn03.jpeg
+    - assets/Thn04.jpeg
+    - assets/Thn05.jpeg
 
 
 

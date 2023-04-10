@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:video_player/video_player.dart';
 import 'package:youtube_player_iframe/youtube_player_iframe.dart';
 
+import '11ContentPlay_page.dart';
 import 'my_page.dart';
 import '10_2search.dart';
 
@@ -146,7 +147,7 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
                   alignment: Alignment.topLeft,
                   margin: EdgeInsets.all(15),
                   child: const Text(
-                    '회원님을 위한 추천 영상',
+                    '\n회원님을 위한 추천 영상',
                     style: TextStyle(
                         color: Colors.black,
                         fontSize: 18,
@@ -160,32 +161,66 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
                     scrollDirection: Axis.horizontal,
                     // 컨테이너들을 ListView의 자식들로 추가
                     children: <Widget>[
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => VideoPlayerApp2()));
+                        },
+                        child: Container(
+                          width: 200.0,
+                          margin: EdgeInsets.fromLTRB(10, 0, 15, 0),
+                          //여기에 "이미지 썸네일 + 영상 페이지로 연결" 넣으면 됨.
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10.0),
+                              image: DecorationImage(
+                                fit: BoxFit.cover,
+                                image: AssetImage('assets/Thn01.jpeg'),
+                              ),
+                              color: Colors.black),
+                        ),
+                      ),
                       Container(
-                        width: 160.0,
-                        //여기에 "이미지 썸네일 + 영상 페이지로 연결" 넣으면 됨.
-                        decoration: const BoxDecoration(
+                          width: 200.0,
+                          margin: EdgeInsets.fromLTRB(0, 0, 15, 0),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10.0),
                             image: DecorationImage(
                               fit: BoxFit.cover,
-                              image: AssetImage('assets/Thn01.jpeg'),
+                              image: AssetImage('assets/Thn02.jpeg'),
                             ),
-                            color: Colors.black),
-                      ),
+                          )),
                       Container(
-                        width: 200.0,
-                        color: Colors.blue,
-                      ),
+                          width: 200.0,
+                          margin: EdgeInsets.fromLTRB(0, 0, 15, 0),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10.0),
+                            image: DecorationImage(
+                              fit: BoxFit.cover,
+                              image: AssetImage('assets/Thn03.jpeg'),
+                            ),
+                          )),
                       Container(
-                        width: 200.0,
-                        color: Colors.green,
-                      ),
+                          width: 200.0,
+                          margin: EdgeInsets.fromLTRB(0, 0, 15, 0),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10.0),
+                            image: DecorationImage(
+                              fit: BoxFit.cover,
+                              image: AssetImage('assets/Thn04.jpeg'),
+                            ),
+                          )),
                       Container(
-                        width: 200.0,
-                        color: Colors.yellow,
-                      ),
-                      Container(
-                        width: 200.0,
-                        color: Colors.orange,
-                      )
+                          width: 200.0,
+                          margin: EdgeInsets.fromLTRB(0, 0, 15, 0),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10.0),
+                            image: DecorationImage(
+                              fit: BoxFit.cover,
+                              image: AssetImage('assets/Thn05.jpeg'),
+                            ),
+                          ))
                     ]),
               ),
               Container(
@@ -206,25 +241,57 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
                     // 컨테이너들을 ListView의 자식들로 추가
                     children: <Widget>[
                       Container(
-                        width: 160.0,
+                        width: 200.0,
+                        margin: EdgeInsets.fromLTRB(10, 0, 15, 0),
                         //여기에 "이미지 썸네일 + 영상 페이지로 연결" 넣으면 됨.
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10.0),
+                            image: DecorationImage(
+                              fit: BoxFit.cover,
+                              image: AssetImage('assets/Thn01.jpeg'),
+                            ),
+                            color: Colors.black),
                       ),
                       Container(
-                        width: 200.0,
-                        color: Colors.blue,
-                      ),
+                          width: 200.0,
+                          margin: EdgeInsets.fromLTRB(0, 0, 15, 0),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10.0),
+                            image: DecorationImage(
+                              fit: BoxFit.cover,
+                              image: AssetImage('assets/Thn02.jpeg'),
+                            ),
+                          )),
                       Container(
-                        width: 200.0,
-                        color: Colors.green,
-                      ),
+                          width: 200.0,
+                          margin: EdgeInsets.fromLTRB(0, 0, 15, 0),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10.0),
+                            image: DecorationImage(
+                              fit: BoxFit.cover,
+                              image: AssetImage('assets/Thn03.jpeg'),
+                            ),
+                          )),
                       Container(
-                        width: 200.0,
-                        color: Colors.yellow,
-                      ),
+                          width: 200.0,
+                          margin: EdgeInsets.fromLTRB(0, 0, 15, 0),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10.0),
+                            image: DecorationImage(
+                              fit: BoxFit.cover,
+                              image: AssetImage('assets/Thn04.jpeg'),
+                            ),
+                          )),
                       Container(
-                        width: 200.0,
-                        color: Colors.orange,
-                      )
+                          width: 200.0,
+                          margin: EdgeInsets.fromLTRB(0, 0, 15, 0),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10.0),
+                            image: DecorationImage(
+                              fit: BoxFit.cover,
+                              image: AssetImage('assets/Thn05.jpeg'),
+                            ),
+                          ))
                     ]),
               ),
             ],
