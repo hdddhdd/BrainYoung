@@ -91,7 +91,10 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
             backgroundColor: Colors.transparent,
             foregroundColor: Colors.black,
             elevation: 0.0,
-            leading: IconButton(icon: Icon(Icons.menu), onPressed: null),
+            leading: Image.asset(
+              'assets/ozzic_logo.png',
+              width: 50,
+            ),
             actions: [
               IconButton(
                   onPressed: () {
@@ -145,9 +148,9 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
                   child: const Text(
                     '회원님을 위한 추천 영상',
                     style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 15,
-                    ),
+                        color: Colors.black,
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold),
                   ),
                 ),
               ),
@@ -160,7 +163,12 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
                       Container(
                         width: 160.0,
                         //여기에 "이미지 썸네일 + 영상 페이지로 연결" 넣으면 됨.
-                     
+                        decoration: const BoxDecoration(
+                            image: DecorationImage(
+                              fit: BoxFit.cover,
+                              image: AssetImage('assets/Thn01.jpeg'),
+                            ),
+                            color: Colors.black),
                       ),
                       Container(
                         width: 200.0,
@@ -184,14 +192,14 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
                 child: Container(
                   alignment: Alignment.topLeft,
                   margin: EdgeInsets.all(15),
-                  child: const Text(
-                    '꿀팁이 필요할 때', style: TextStyle(color: Colors.black,                      fontSize: 15,
-),
-                    //style: TextStyle(color: Colors.white),
-                  ),
+                  child: const Text('꿀팁이 필요할 때',
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold)),
                 ),
               ),
-             Container(
+              Container(
                 height: 120,
                 child: ListView(
                     scrollDirection: Axis.horizontal,
@@ -245,7 +253,7 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
               child: Icon(
                 _controller.value.isPlaying ? Icons.pause : Icons.play_arrow,
               ),
-              backgroundColor: Color.fromARGB(49, 211, 211, 211),
+              backgroundColor: Color.fromARGB(0, 255, 255, 255),
             ),
           ),
           //어디 들어가야 하냐

@@ -83,6 +83,18 @@ flutter:
     - assets/videos/lit_enfj.mp4
     - assets/wallpaper.jpg
     - assets/ozzic_logo.png
+    - assets/select_01.png
+    - assets/select_02.png
+    - assets/select_03.png
+    - assets/select_04.png
+    - assets/select_05.png
+    - assets/select_06.png
+    - assets/Thn01.jpeg
+    - assets/Thn02.jpeg
+    - assets/Thn03.jpeg
+
+
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

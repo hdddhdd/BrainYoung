@@ -34,9 +34,10 @@ class _ChooseMenu1PageState extends State<ChooseMenu1Page> {
   Widget getChild(String imagePath, String title) {
     return Container(
       decoration: BoxDecoration(
-        //borderRadius: BorderRadius.circular(20),
-        //border: Border.all(color: Color.fromARGB(46, 0, 0, 0), width: 2),
-      ),
+          //color: Colors.orange,
+          borderRadius: BorderRadius.all(
+        Radius.circular(30),
+      )),
       width: 150,
       height: 100,
       child: Column(
@@ -46,9 +47,11 @@ class _ChooseMenu1PageState extends State<ChooseMenu1Page> {
               child: Image.network(
             imagePath,
             fit: BoxFit.contain,
+            width: 50,
+            height: 50,
           )),
           Padding(
-            padding: const EdgeInsets.all(30.0),
+            padding: const EdgeInsets.all(10.0),
             child: Text(
               title,
               style: TextStyle(color: Colors.white),
@@ -129,65 +132,54 @@ class _ChooseMenu1PageState extends State<ChooseMenu1Page> {
               ),
             ]))),
 //선택지 여기에 추가하기
-            MultiSelectContainer(
-                //textStyles: const TextStyle(color: Colors.black),
-              
-               itemsPadding: const EdgeInsets.all(5),
-               
-                itemsDecoration: MultiSelectDecorations(
-                  decoration:
-
-                      BoxDecoration(color: Color.fromRGBO(47, 48, 53, 1)),
-                  
-                  
-                  selectedDecoration: const BoxDecoration(
-                    gradient: LinearGradient(colors: [
-                      Color.fromARGB(255, 113, 151, 254),
-                      Color.fromARGB(95, 113, 151, 254)
-                    ]),
-                  color: Colors.black,
-                  
-                  ),
-                ),
-                items: [
-                  MultiSelectCard(
-                    value: 'Dart',
-                    child: getChild(
-                      'https://upload.wikimedia.org/wikipedia/commons/7/7e/Dart-logo.png',
-                      '진로 선택',
+            Container(
+              margin: const EdgeInsets.fromLTRB(0, 0, 0, 50),
+              child: MultiSelectContainer(
+                  itemsPadding: const EdgeInsets.all(5),
+                  itemsDecoration: const MultiSelectDecorations(
+                    decoration: BoxDecoration(
+                      color: Color.fromRGBO(47, 48, 53, 1),
+                      borderRadius: BorderRadius.all(Radius.circular(30)),
+                    ),
+                    selectedDecoration: BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(30)),
+                      gradient: LinearGradient(colors: [
+                        Color.fromARGB(255, 113, 151, 254),
+                        Color.fromARGB(95, 113, 151, 254)
+                      ]),
+                      color: Colors.black,
                     ),
                   ),
-                  MultiSelectCard(
-                    value: 'Python',
-                    child: getChild(
-                        'http://assets.stickpng.com/images/5848152fcef1014c0b5e4967.png',
-                        '성적 관리'),
-                  ),
-                  MultiSelectCard(
-                      value: 'JavaScript',
+                  items: [
+                    MultiSelectCard(
+                      value: '0',
                       child: getChild(
-                          'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/480px-Unofficial_JavaScript_logo_2.svg.png',
-                          '친구 관계')),
-                  MultiSelectCard(
-                    value: 'Java',
-                    child: getChild(
-                        'http://assets.stickpng.com/images/58480979cef1014c0b5e4901.png',
-                        '학과 선택'),
-                  ),
-                  MultiSelectCard(
-                    value: 'C#',
-                    child: getChild(
-                        'https://seeklogo.com/images/C/c-sharp-c-logo-02F17714BA-seeklogo.com.png',
-                        '입시 준비'),
-                  ),
-                  MultiSelectCard(
-                    value: 'C++',
-                    child: getChild(
-                        'https://cdn.freebiesupply.com/logos/thumbs/2x/c-logo.png',
-                        '부모님과의 관계'),
-                  ),
-                ],
-                onChange: (allSelectedItems, selectedItem) {}),
+                        'assets/select_01.png',
+                        '진로 선택',
+                      ),
+                    ),
+                    MultiSelectCard(
+                      value: '1',
+                      child: getChild('assets/select_02.png', '성적 관리'),
+                    ),
+                    MultiSelectCard(
+                        value: '2',
+                        child: getChild('assets/select_03.png', '친구 관계')),
+                    MultiSelectCard(
+                      value: '3',
+                      child: getChild('assets/select_04.png', '학과 선택'),
+                    ),
+                    MultiSelectCard(
+                      value: '4',
+                      child: getChild('assets/select_05.png', '입시 준비'),
+                    ),
+                    MultiSelectCard(
+                      value: '5',
+                      child: getChild('assets/select_06.png', '부모님과의 관계'),
+                    ),
+                  ],
+                  onChange: (allSelectedItems, selectedItem) {}),
+            ),
 
             Container(
                 height: 80,

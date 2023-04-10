@@ -5,6 +5,8 @@ import 'package:brainyoung_mvp/pages/10_2search.dart';
 import 'package:brainyoung_mvp/pages/3aboutyou2_page.dart';
 import 'package:brainyoung_mvp/pages/4promotion_page.dart';
 import 'package:brainyoung_mvp/pages/7choosemenu1.dart';
+import 'package:brainyoung_mvp/pages/8choosemenu2.dart';
+import 'package:brainyoung_mvp/pages/9choosemenu3.dart';
 import 'package:brainyoung_mvp/pages/any_widget_example.dart';
 import 'package:brainyoung_mvp/pages/multiselectiontest_page.dart';
 import 'package:brainyoung_mvp/pages/my_page.dart';
@@ -42,7 +44,7 @@ class MyApp extends StatelessWidget {
       // 여기서 처음 화면 설정
       //home: MainMenuPage(),
       //희정 컨텐츠 페이지 테스트용
-      home: MainMenuPage(),
+      home: VideoPlayerApp(),
     );
   }
 }
