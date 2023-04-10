@@ -42,7 +42,7 @@ class MyApp extends StatelessWidget {
       // 여기서 처음 화면 설정
       //home: MainMenuPage(),
       //희정 컨텐츠 페이지 테스트용
-      home: ChooseMenu1Page(),
+      home: MainMenuPage(),
     );
   }
 }

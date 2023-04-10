@@ -97,7 +97,7 @@ class _SearchPageState extends State<SearchPage> {
                       color: Colors.white,
                     ),
                     Text(
-                    ' 햄스터가 보고싶어',
+                    ' 친구 관계 조언',
                     style: TextStyle(color: Colors.white),
                     ),
                   ],
@@ -112,7 +112,7 @@ class _SearchPageState extends State<SearchPage> {
                       color: Colors.white,
                     ),
                     Text(
-                    ' 고양이가 보고싶어',
+                    ' 컴퓨터학과 ',
                     style: TextStyle(color: Colors.white),
                     ),
                   ],
@@ -127,7 +127,7 @@ class _SearchPageState extends State<SearchPage> {
                       color: Colors.white,
                     ),
                     Text(
-                    ' 멍멍이도 보고싶어',
+                    ' 고등학교 3학년 정시',
                     style: TextStyle(color: Colors.white),
                     ),
                   ],
@@ -142,7 +142,7 @@ class _SearchPageState extends State<SearchPage> {
                       color: Colors.white,
                     ),
                     Text(
-                    ' 병아리도 보고싶어',
+                    ' 경영학과 ',
                     style: TextStyle(color: Colors.white),
                     ),
                   ],
